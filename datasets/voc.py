@@ -8,7 +8,7 @@ import PIL.Image
 import scipy.io
 import torch
 from torch.utils import data
-from ipdb import set_trace
+#from ipdb import set_trace
 
 
 class VOCClassSegBase(data.Dataset):
@@ -73,7 +73,7 @@ class VOCClassSegBase(data.Dataset):
         lbl = PIL.Image.open(lbl_file)
         lbl = np.array(lbl, dtype=np.int32)
         lbl[lbl == 255] = -1
-        set_trace()
+        #set_trace()
         if self._transform:
             return self.transform(img, lbl)
         else:
